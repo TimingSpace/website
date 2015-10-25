@@ -204,7 +204,8 @@ ul#nav li.current a, ul#nav li:hover a
 { width: 275px;
   padding: 5px;
   margin: 10px 10px 20px 0;
-  float: left;}
+  float: left;
+  color:#FFF;}
   
 footer
 { width: 940px;
