@@ -141,7 +141,7 @@ HTMLActuator.prototype.message = function (won) {
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 
   this.clearContainer(this.sharingContainer);
-  this.sharingContainer.appendChild(this.scoreTweetButton());
+  //this.sharingContainer.appendChild(this.scoreTweetButton());
   twttr.widgets.load();
 };
 

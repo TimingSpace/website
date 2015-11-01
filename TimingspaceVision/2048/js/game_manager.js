@@ -169,7 +169,7 @@ GameManager.prototype.move = function (direction) {
         else{b=tile.value};
         if((next&&tile.value == '王香伟'&&next.value == '张会')||(next&&next.value == '王香伟'&&tile.value == '张会')) 
         {
-          a=512;b=512;
+          a=64;b=64;
         } 
         if (next && a===b && !next.mergedFrom) {
           var merged = new Tile(positions.next, a * 2);
