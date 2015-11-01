@@ -5,7 +5,7 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.actuator     = new Actuator;
 
   this.startTiles   = 2;
-
+  alert('乖乖，我爱你，嘿嘿')
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
@@ -36,7 +36,6 @@ GameManager.prototype.isGameTerminated = function () {
 // Set up the game
 GameManager.prototype.setup = function () {
   this.grid        = new Grid(this.size);
-
   this.score       = 0;
   this.over        = false;
   this.won         = false;
@@ -183,11 +182,11 @@ GameManager.prototype.move = function (direction) {
           self.score += a*2;
 
           // The mighty 2048 tile
-          if (merged.value==8192) self.won = true;
+          alert(merged.value);
+          if (merged.value=='') self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
-
         if (!self.positionsEqual(cell, tile)) {
           moved = true; // The tile moved from its original cell!
         }
