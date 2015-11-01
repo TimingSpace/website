@@ -167,7 +167,10 @@ GameManager.prototype.move = function (direction) {
         else if (tile&&(tile.value == '陈老师')){
           b=1024;}
         else{b=tile.value};
-          
+        if((next&&tile.value == '王香伟'&&next.value == '张会')||(next&&next.value == '王香伟'&&tile.value == '张会')) 
+        {
+          a=512;b=512;
+        } 
         if (next && a===b && !next.mergedFrom) {
           var merged = new Tile(positions.next, a * 2);
           merged.mergedFrom = [tile, next];
@@ -183,7 +186,7 @@ GameManager.prototype.move = function (direction) {
 
           // The mighty 2048 tile
           //alert(merged.value);
-          if (merged.value=='') self.won = true;
+          if (merged.value=='陈老师') self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
